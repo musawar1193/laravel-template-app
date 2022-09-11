@@ -19,10 +19,3 @@ Now that all containers are up, we can add `127.0.0.1 project.local` to our `/et
 
 Boom! access `project.local` on your favorite browser
 
-## Questions and Improvements
-
-For any question or emprovement please send an e-mail to Shady Smaoui [shady@veloxsolutions.ca](mailto:shady@veloxsolutions.ca).
-
-## License
-
-ShadySmaoui©2020 licensed under the [MIT license](https://opensource.org/licenses/MIT).
