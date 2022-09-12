@@ -20,7 +20,7 @@ services:
       - ./:/var/www
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
-      - app-network
+      - default
 
   #Nginx Service
   webserver:
@@ -34,7 +34,7 @@ services:
       - ./:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
     networks:
-      - app-network
+      - default
 
   #MySQL Service
   db:
@@ -45,7 +45,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel
-      MYSQL_USER: root
+      MYSQL_USER: user
       MYSQL_PASSWORD: root
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
@@ -56,7 +56,7 @@ services:
       - dbdata:/var/lib/mysql/
       - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
     networks:
-      - app-network
+      - default
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.8
     restart: unless-stopped
@@ -69,10 +69,10 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
     networks:
-      - app-network
+      - default
 #Docker Networks
 networks:
-  app-network:
+  default:
     driver: bridge
 #Volumes
 volumes:
