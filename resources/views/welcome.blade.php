@@ -83,10 +83,6 @@
                 <div class="title m-b-md">
                     Welcome
                 </div>
-
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/musawar1193/" target="-_blank">linkediIn</a>
-                </div>
             </div>
         </div>
     </body>
