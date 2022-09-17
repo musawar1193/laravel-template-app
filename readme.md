@@ -14,7 +14,9 @@ Comes with:
 - `docker exec app composer install`
 - `cp .env.example .env`
 - `docker-compose exec app php artisan key:generate`
+- `docker-compose exec app composer dumpautoload`
 - `docker-compose exec app php artisan migrate`
+- `docker-compose exec app php artisan db:seed`
 
 Now that all containers are up, we can add `127.0.0.1 project.local` to our `/etc/hosts` file
 
