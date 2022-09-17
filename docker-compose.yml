@@ -20,7 +20,7 @@ services:
       - ./:/var/www
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
-      - default
+      - app-network
 
   #Nginx Service
   webserver:
@@ -34,7 +34,7 @@ services:
       - ./:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
     networks:
-      - default
+      - app-network
 
   #MySQL Service
   db:
@@ -55,10 +55,10 @@ services:
       - dbdata:/var/lib/mysql/
       - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
     networks:
-      - default
+      - app-network
 #Docker Networks
 networks:
-  default:
+  app-network:
     driver: bridge
 #Volumes
 volumes:
