@@ -8,8 +8,8 @@ Comes with:
 - database: `Mysql-5.7.22`
 
 ## Setup
-- `git clone git@github.com:shsma/laravel-docker.git`
-- `cd laravel-docker-master`
+- `git clone git@github.com:musawar1193/laravel-template-app.git`
+- `cd laravel-template-app`
 - `docker-compose up -d`
 - `docker exec app composer install`
 - `cp .env.example .env`
