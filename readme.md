@@ -11,7 +11,7 @@ Comes with:
 - `git clone git@github.com:musawar1193/laravel-template-app.git`
 - `cd laravel-template-app`
 - `docker-compose up -d`
-- `docker exec app composer install`
+- `docker-compose exec app composer install`
 - `cp .env.example .env`
 - `docker-compose exec app php artisan key:generate`
 - `docker-compose exec app composer dumpautoload`
